@@ -59,7 +59,7 @@
                          styleClass="ui button icon labeled"    
                          action="#{propostaMB.temp()}"                                                                                                                       
                          oncomplete="PF('buscaAutor').hide();">                            
-                         <p:ajax imediate="true" event="click" process="@this" update=":frmAutor:tblAutor" />
+                         <p:ajax ajax="true" event="click" process="@this" update=":frmAutor:tblAutor" />
              </p:commandButton>                                                                                    
 		  </div>	 
         </p:dialog>
