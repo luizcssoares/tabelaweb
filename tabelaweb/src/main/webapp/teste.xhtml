@@ -11,13 +11,12 @@
    <h:form id="frmAutor">                                               
         <p:commandButton value="Buscar Autores"                                                  
                          styleClass="ui button icon labeled" 
-                         onclick="PF('buscaAutor').show();" />
-                         
+                         onclick="PF('buscaAutor').show();" />                         
         <div class="field">	 	 
 		     <p:dataTable id="tblAutor" 
 		                  emptyMessage="Nao existe autores cadastradas !" 
 		                  var="cursor" 
-		                  value="#{propostaMB.listaAutoresTemp}">	
+		                  value="#{propostaMB.listaAutores}">	
 		       <f:facet name="header">
                   Lista Autores
                </f:facet>                   		       
@@ -55,11 +54,14 @@
 		   	     <h:outputText value="#{cursor.email}" />
 		       </p:column>			           	    	
 		     </p:dataTable>
-		     <p:commandButton value="Importar Marcados"                                                  
-                         styleClass="ui button icon labeled"    
-                         action="#{propostaMB.temp()}"                                                                                                                       
-                         oncomplete="PF('buscaAutor').hide();">                            
-                         <p:ajax ajax="true" event="click" process="@this" update=":frmAutor:tblAutor" />
+		     		           	               		     
+		     <p:commandButton value="Importar Marcados">                                                    
+                         <p:ajax ajax="true"
+                                 partialSubmit="true" 
+                                 event="click" 
+                                 process=":frmAutor" 
+                                 update=":frmAutor:tblAutor" 
+                                 oncomplete="PF('buscaAutor').hide();" />
              </p:commandButton>                                                                                    
 		  </div>	 
         </p:dialog>

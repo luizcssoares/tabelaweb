@@ -27,22 +27,7 @@ public class PropostaMB implements Serializable {
 
 	private List<ConsideracaoProposta> listaConsideracao;
 	private List<Autor> listaAutores;	   
-	private List<Autor> listaAutoresSelecionada;
-	private List<Autor> listaAutoresTemp;
-
-	public List<Autor> getListaAutoresTemp() {
-		return listaAutoresTemp;
-	}
-
-	public void setListaAutoresTemp(List<Autor> listaAutoresTemp) {
-		this.listaAutoresTemp = listaAutoresTemp;
-	}
-	
-	
-	public void temp() {
-		listaAutoresTemp = new ArrayList<Autor>();
-		listaAutoresTemp = 	listaAutoresSelecionada;
-	}
+	private List<Autor> listaAutoresSelecionada;	
 
 	public List<Autor> getListaAutores() {	    
 		listaAutores = new ArrayList<Autor>();
@@ -63,14 +48,6 @@ public class PropostaMB implements Serializable {
 	public void setListaAutoresSelecionada(List<Autor> listaAutoresSelecionada) {
 		this.listaAutoresSelecionada = listaAutoresSelecionada;
 	}
-
-	public void importaAutores(){		
-		for (Autor autor: listaAutores) {
-		   if (autor.getSelected()) {
-			   listaAutoresSelecionada.add(autor);
-		   }			   
-		}    
-	}	
 	
 	public String teste() {
 		System.out.println("ola mundo !!!");
