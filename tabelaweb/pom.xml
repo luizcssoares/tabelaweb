@@ -53,6 +53,10 @@
 	    <url>http://repository.primefaces.org</url>
 	    <layout>default</layout>
   </repository>
+  <repository>
+      <id>forplay-legacy</id>
+      <url>http://forplay.googlecode.com/svn/mavenrepo</url>
+    </repository>
 </repositories>
 <build>
    <plugins>
