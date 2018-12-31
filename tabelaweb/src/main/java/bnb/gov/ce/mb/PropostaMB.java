@@ -16,16 +16,11 @@ import javax.faces.bean.ViewScoped;
 import org.primefaces.context.RequestContext;
 
 import bnb.gov.ce.entity.Autor;
-import bnb.gov.ce.entity.ConsideracaoProposta;
 
 @ManagedBean(name="propostaMB")
 @ViewScoped
-//@ManagedBean(value="novaPropostaMB")
-//@SessionScoped
-//@RequestScoped
 public class PropostaMB implements Serializable {
 
-	private List<ConsideracaoProposta> listaConsideracao;
 	private List<Autor> listaAutores;	   
 	private List<Autor> listaAutoresSelecionada;	
 
